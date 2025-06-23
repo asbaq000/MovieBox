@@ -1,8 +1,8 @@
 # File: netlify.toml (in your project's root folder)
 
 [build]
-  # This is the corrected command with CI=false
-  command = "cd frontend && npm install && CI=false npm run build"
+  # This final command installs dependencies for both backend and frontend, then builds the frontend.
+  command = "npm install --prefix backend && npm install --prefix frontend && CI=false npm run build --prefix frontend"
   
   # The directory where our serverless function code lives
   functions = "backend"
