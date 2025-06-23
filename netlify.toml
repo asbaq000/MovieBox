@@ -1,14 +1,18 @@
 # File: netlify.toml (in your project's root folder)
 
 [build]
-  # This is the corrected command
-  command = "cd frontend && npm install && npm run build"
+  # This is the corrected command with CI=false
+  command = "cd frontend && npm install && CI=false npm run build"
   
-  # This is the directory where our serverless function code lives
+  # The directory where our serverless function code lives
   functions = "backend"
   
-  # This is the directory Netlify will publish as the static site
+  # The directory Netlify will publish as the static site
   publish = "frontend/build"
+
+# This section tells Netlify which version of Node.js to use for the build
+[build.environment]
+  NODE_VERSION = "18"
 
 # This is the magic rule that makes your API work
 [[redirects]]
