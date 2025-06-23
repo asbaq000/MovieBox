@@ -1,0 +1,17 @@
+# File: netlify.toml (in your project's root folder)
+
+[build]
+  # This command tells Netlify to go into the 'frontend' folder and run the build script
+  command = "npm run build --prefix frontend"
+
+  # This is the directory where our serverless function code lives
+  functions = "backend"
+
+  # This is the directory Netlify will publish as the static site
+  publish = "frontend/build"
+
+# This is the magic rule that makes your API work
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200

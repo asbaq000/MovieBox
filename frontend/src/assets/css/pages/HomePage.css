@@ -1,0 +1,22 @@
+.homepage-container {
+  padding-top: 1rem;
+}
+
+.popular-movies-section {
+  padding: 0 2rem;
+}
+
+.popular-movies-title {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 1rem;
+}
+
+.end-of-results {
+  text-align: center;
+  padding: 2rem;
+  color: var(--grey-color);
+  font-weight: 500;
+}

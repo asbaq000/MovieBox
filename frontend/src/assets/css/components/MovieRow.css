@@ -1,0 +1,32 @@
+.movie-row {
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.movie-row__title {
+  color: #e5e5e5;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.movie-row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding: 1rem 0;
+  gap: 15px;
+}
+
+.movie-row__posters::-webkit-scrollbar {
+  display: none;
+}
+.movie-row__posters {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.movie-row__poster-card {
+  flex-shrink: 0;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
