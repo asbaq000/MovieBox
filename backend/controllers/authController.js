@@ -84,7 +84,7 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
 
   await user.save({ validateBeforeSave: false });
 
-  const resetUrl = `http://localhost:3000/resetpassword/${resetToken}`;
+  const resetUrl = `https://moviebox0.netlify.app/resetpassword/${resetToken}`;
 
   const message = `You are receiving this email because you (or someone else) has requested to reset the password for your MovieBox account.\n\nPlease click the following link, or paste it into your browser to complete the process within 10 minutes:\n\n${resetUrl}\n\nIf you did not request this, please ignore this email and your password will remain unchanged.`;
 
